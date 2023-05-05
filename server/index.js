@@ -9,7 +9,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "http://passionJC.github.io/simple-chat-app",
         methods: ["GET", "POST"],
     },
 });
@@ -31,6 +31,6 @@ io.on("connection", (socket) => {
     });
 });
 
-server.listen(3001, () => {
+server.listen("http://passionJC.github.io/simple-chat-app", () => {
     console.log("SERVER RUNNING");
 });
